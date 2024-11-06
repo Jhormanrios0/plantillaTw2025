@@ -1,0 +1,84 @@
+:root {
+  --color-primary: #004693;
+  --color-secondary: #1667b9;
+  --color-tertiary: #2b87de;
+}
+
+.clamp-text-personalizado {
+  display: -webkit-box; /* Soporte para WebKit */
+  -webkit-line-clamp: 7; /* Mostrar 15 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Respaldo para Firefox */
+  display: block;
+  max-height: calc(1.5em * 15); /* Ajusta según el alto de línea */
+  line-height: 1.5em; /* Ajuste del espaciado entre líneas */
+}
+.splide__arrow {
+  z-index: 10;
+}
+
+.splide__arrow--prev {
+  left: -40px;
+}
+
+.splide__arrow--next {
+  right: -15px;
+}
+
+.splide__pagination--custom {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.splide__pagination--custom .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.splide__pagination--custom .splide__pagination__page.is-active {
+  background-color: #333;
+}
+
+/* Estilos generales para las tarjetas */
+.custom-card {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-card:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--color-primary);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.custom-card:hover,
+.custom-card:focus {
+  color: white;
+}
+
+.custom-card:hover:before,
+.custom-card:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.custom-card:active {
+  transform: scale(0.9);
+}
