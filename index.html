@@ -379,46 +379,72 @@
       <section class="col-span-1">
         <section class="grid grid-cols-2">
 
-          <span>Noticias</span>
+          <span class="hover:scale-150">Noticias</span>
         </section>
       </section>
 
     </section>
     <!--* Noticias -->
     <!--*  Servicio al ciudadano -->
-    <section class="container mx-auto flex justify-center items-center gap-4 p-4">
-      <!-- Tarjetas de enlace -->
-      <section class="flex ">
-        <!-- Tarjeta 1 -->
-        <article
-          class="p-4 bg-white text-primaryColor rounded-md shadow-md items-center justify-center border-[3px] border-primaryColor h-[320px] flex flex-col max-w-sm mx-auto">
-          <!-- Icono -->
-          <section class="w-[40%] flex justify-center ">
-            <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
-          </section>
-          <!-- Contenido -->
-          <section class="w-[60%] text-center">
-            <!-- Titulo -->
-            <h3 class="font-bold text-[20px]">PQRSD</h3>
-
-            <!-- Boton -->
-            <div class="mt-4">
-              <a href="#" class="text-primaryColor font-bold border-2 border-primaryColor p-[10px]">Más Información</a>
-            </div>
-          </section>
-        </article>
-      </section>
-      <!--*  Servicio al ciudadano -->
-
-
-      <!-- !SEPARADOR -->
-      <div class="h-[500px]">
-
+    <section class="container mx-auto p-4">
+      <div id="splide" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <section class="flex group">
+                <article class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                  <!-- Icono -->
+                  <section class="w-full flex justify-center mb-2">
+                    <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
+                  </section>
+                  <!-- Contenido -->
+                  <section class="w-full text-center flex-grow">
+                    <!-- Titulo -->
+                    <h3 class="font-bold text-[24px] mb-2">PQRSD</h3>
+                  </section>
+                  <!-- Boton -->
+                  <div class="more-info-button pb-3">
+                    <a href="#" class="button-with-border">Más Información</a>
+                  </div>
+                </article>
+              </section>
+            </li>
+            <!-- Repite los elementos para cada slide -->
+            <li class="splide__slide">
+              <section class="flex group">
+                <article class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                  <!-- Icono -->
+                  <section class="w-full flex justify-center mb-2">
+                    <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
+                  </section>
+                  <!-- Contenido -->
+                  <section class="w-full text-center flex-grow">
+                    <!-- Titulo -->
+                    <h3 class="font-bold text-[24px] mb-2">PQRSD</h3>
+                  </section>
+                  <!-- Boton -->
+                  <div class="more-info-button pb-3">
+                    <a href="#" class="button-with-border">Más Información</a>
+                  </div>
+                </article>
+              </section>
+            </li>
+            <!-- Añade más slides según sea necesario -->
+          </ul>
+        </div>
       </div>
+    </section>
+    <!--*  Servicio al ciudadano -->
+
+
+    <!-- !SEPARADOR -->
+    <div class="h-[500px]">
+
+    </div>
 
 
 
-      <!-- !SEPARADOR -->
+    <!-- !SEPARADOR -->
 
 
   </main>
