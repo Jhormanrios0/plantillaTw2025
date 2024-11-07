@@ -307,7 +307,7 @@
         sin filas ni congestiones en lugares públicos.<br>
         En este espacio brindamos atención a sus solicitudes.
       </span>
-      <div class="h-2 w-[500px] rounded-full mx-auto my-4 flex overflow-hidden">
+      <div class="h-2 w-full sm:w-[300px] md:w-[400px] lg:w-[500px] rounded-full mx-auto my-4 flex overflow-hidden">
         <div class="h-full w-1/3 bg-primaryColor"></div>
         <div class="h-full w-1/3 bg-secundaryColor"></div>
         <div class="h-full w-1/3 bg-thirdColor"></div>
@@ -386,57 +386,269 @@
     </section>
     <!--* Noticias -->
     <!--*  Servicio al ciudadano -->
-    <section class="container mx-auto p-4">
-      <div id="splide" class="splide">
+    <section class=" container mx-auto ">
+      <div id="splide" class="splide h-[200px] flex items-center">
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide">
-              <section class="flex group">
-                <article class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
-                  <!-- Icono -->
-                  <section class="w-full flex justify-center mb-2">
-                    <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
-                  </section>
-                  <!-- Contenido -->
-                  <section class="w-full text-center flex-grow">
-                    <!-- Titulo -->
-                    <h3 class="font-bold text-[24px] mb-2">PQRSD</h3>
-                  </section>
-                  <!-- Boton -->
-                  <div class="more-info-button pb-3">
-                    <a href="#" class="button-with-border">Más Información</a>
-                  </div>
-                </article>
-              </section>
+            <!-- ELEMENTO 1 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    PQRSD</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
             </li>
-            <!-- Repite los elementos para cada slide -->
-            <li class="splide__slide">
-              <section class="flex group">
-                <article class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
-                  <!-- Icono -->
-                  <section class="w-full flex justify-center mb-2">
-                    <i class="fi fi-rr-mailbox-envelope text-[70px]"></i>
-                  </section>
-                  <!-- Contenido -->
-                  <section class="w-full text-center flex-grow">
-                    <!-- Titulo -->
-                    <h3 class="font-bold text-[24px] mb-2">PQRSD</h3>
-                  </section>
-                  <!-- Boton -->
-                  <div class="more-info-button pb-3">
-                    <a href="#" class="button-with-border">Más Información</a>
-                  </div>
-                </article>
-              </section>
+            <!-- ELEMENTO 2 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-user-headset text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    ATENCIÓN A LA CIUDADANÍA</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
             </li>
-            <!-- Añade más slides según sea necesario -->
+            <!-- ELEMENTO 3 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rs-heart-partner-handshake text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    TRANSPARENCIA</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 4 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-queue-alt text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    NUESTRO GABINETE</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 5 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-calculator-bill text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    RENDICIÓN DE CUENTAS</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 6 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-file-download text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    TRÁMITES Y SERVICIOS</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 7 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-bs-child-head text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    PORTAL DE NIÑOS</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 8 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-br-marker text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    NUESTRO MUNICIPIO</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 9 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-gallery text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    GALERÍA</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 10 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-corporate-alt text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    SECRETARÍAS Y DIRECCIONES</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 11 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rs-government-user text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    NUESTRO ALCALDE</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
+            <!-- ELEMENTO 12 -->
+            <li class="splide__slide group">
+              <article
+                class="circle-card p-6 bg-white text-primaryColor shadow-lg border-2 border-primaryColor h-[200px] w-[200px] flex flex-col items-center mx-auto transition-all duration-300">
+                <!-- Icono -->
+                <section class="w-full flex justify-center mb-2">
+                  <i class="fi fi-rr-chat-arrow-grow text-[70px]"></i>
+                </section>
+                <!-- Contenido -->
+                <section class="w-full text-center flex-grow">
+                  <!-- Titulo -->
+                  <h3
+                    class="font-bold text-[16px] mb-4 line-clamp-1 group-hover:line-clamp-none transition-all duration-500 ease-in-out">
+                    PROYECTOS QUE AVANZAN</h3>
+                </section>
+                <!-- Boton -->
+                <div class="more-info-button pt-4 pb-3">
+                  <a href="#" class="button-with-border">Más Información</a>
+                </div>
+              </article>
+            </li>
           </ul>
         </div>
+        <article class="splide__arrows"></article>
+
       </div>
     </section>
     <!--*  Servicio al ciudadano -->
-
-
     <!-- !SEPARADOR -->
     <div class="h-[500px]">
 
