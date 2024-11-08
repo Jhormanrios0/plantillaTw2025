@@ -29,3 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }).mount();
 });
 
+var splide = new Splide(".slider__news", {
+  classes: {
+    arrows: "splide__arrows translate-y-0 transform",
+    arrow: "rounded-full ",
+    prev: "splide__arrow--prev   translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
+    next: "splide__arrow--next   translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
+    pagination: " ",
+    page: " ",
+  },
+  rewind: true,
+  autoplay: "play",
+});
+splide.mount();
