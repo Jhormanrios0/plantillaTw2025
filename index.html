@@ -375,10 +375,13 @@
     <!--* Enlaces de Interes  -->
     <!--* Noticias -->
     <section class="lg:container mx-auto flex flex-col items-center">
+      <!-- TITULO SECCIÓN-->
       <h2 class="text-3xl font-bold py-10 ">Noticias</h2>
-      <article class="flex items-center  w-full px-10 py-2 my-8 bg-blue-400 rounded-full border-2">
+      <!-- Section Ultimas Noticias-->
+      <article class="flex items-center  w-full px-10 py-2 my-8 bg-secundaryColor text-white rounded-full border-2">
         <span class="flex-grow-0 flex-shrink-0 basis-1/5 text-lg: font-semibold">Ultimas noticias</span>
         <section class="flex  splide slider__news items-center flex-grow flex-shrink basis-4/5">
+          <!-- Slider TITULOS NOTICIAS-->
           <section class="splide__track w-full">
             <ul class="splide__list">
               <li class="splide__slide">
@@ -389,30 +392,38 @@
               </li>
             </ul>
           </section>
+          <!-- Arrows content -->
           <section class="splide__arrows flex">
-            <!-- Arrows content -->
           </section>
         </section>
       </article>
       <article class="grid grid-cols-2 gap-6 relative container mx-auto">
-        <!-- Noticia principal -->
-        <section class="relative flex items-center justify-center w-full lg:h-[480px] group overflow-hidden">
+        <!--! Noticia principal !-->
+        <section class="relative rounded-xl flex items-center justify-center w-full lg:h-[480px] group overflow-hidden">
+          <!-- FECHA NOTICIA-->
           <figure
-            class="absolute z-10 -translate-x-full group-hover:translate-x-0 transform transition-transform duration-200 flex left-2 rounded-lg top-2 bg-white p-2 justify-center items-center gap-2">
-            <i class="fa-solid fa-calendar"></i><span class="text-sm font-semibold">2 oct</span></figure>
+            class="absolute z-10 -translate-x-full group-hover:translate-x-0 transform transition-transform duration-200 flex left-2 rounded-lg  top-2 bg-white p-2 justify-center items-center gap-2">
+            <i class="fa-solid fa-calendar"></i><span class="text-sm font-semibold">2 oct</span>
+          </figure>
+          <!-- IMAGEN FONDO-->
           <img
             class="absolute filter blur-sm brightness-50 group-hover:brightness-75 contrast-75 group-hover:blur-none inset-0 w-full h-full object-cover rounded-xl"
             src="/assets/img/sliderHome/slider3.webp" alt="">
+          <!-- CATEGORIA DE NOTICIA-->
           <span class="absolute translate-y-full px-2 font-semibold bg-white rounded-md">Prensa</span>
-          <div
+          <!-- CONTENEDOR DE TITULO Y DESCRIPCION-->
+          <section
             class="relative text-white max-w-lg p-2 rounded-xl flex flex-col transform transition-transform duration-300 group-hover:translate-y-24">
-            <span class="text-center text-xl font-semibold line-clamp-2">Lorem ipsum dolor sit amet consectetur
+            <!-- TITULO NOTICIA-->
+            <h3 class="text-center text-xl font-semibold line-clamp-2">Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Tenetur dolor explicabo dolorum
-              laudantium! Iure, doloremque necessitatibus dolorem at facilis exercitationem.</span>
-            <p
+              laudantium! Iure, doloremque necessitatibus dolorem at facilis exercitationem.</h3>
+            <!--DESCRIPCIÓN NOTICIA-->
+            <span
               class=" opacity-0 group-hover:opacity-100 duration-500 transition-opacity ease-in-out text-center line-clamp-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, suscipit!</p>
-          </div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, suscipit!</span>
+          </section>
+          <!--BOTÓN LEER MÁS NOTICIAS-->
           <a href="#"
             class="absolute bottom-0 transform translate-y-full  group-hover:translate-y-0 flex text-center m-auto justify-center items-center p-2 transition-all duration-300">
             <span class="text-lg text-white font-semibold mx-5 lg:w-auto">Ver noticias</span>
@@ -422,7 +433,7 @@
             </figure>
           </a>
         </section>
-        <!--* Noticia principal -->
+        <!--*! Noticia principal -->
         <!--* segundo contenedor -->
         <section class="grid grid-rows-2 gap-4 lg:h-[480px]">
           <article class="relative flex items-center justify-center w-full lg:h-[235px] group overflow-hidden">
