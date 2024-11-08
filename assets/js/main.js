@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: false,
     arrows: true,
     autoplay: true,
-    interval: 10000,
+    interval: 70000,
     breakpoints: {
       1024: {
         // Tablet

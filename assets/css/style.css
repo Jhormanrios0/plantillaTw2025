@@ -45,8 +45,8 @@
 .splide__pagination--custom .splide__pagination__page.is-active {
   background-color: #333;
 }
-
-/* Estilos generales para las tarjetas */
+/**!▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀!**/
+/** Estilos generales para las tarjetas de ENLACES DE INTERÉS **/
 .custom-card {
   position: relative;
   z-index: 1;
@@ -82,9 +82,9 @@
 .custom-card:active {
   transform: scale(0.9);
 }
-
-/* Estilos generales para las tarjetas */
-
+/** Estilos generales para las tarjetas de ENLACES DE INTERÉS **/
+/**!▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀!**/
+/** Estilos generales para SLIDER DE SERVICIOS CIUDADANOS **/
 .circle-card {
   border-radius: 50%;
   overflow: hidden;
@@ -102,13 +102,13 @@
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.group:hover .circle-card {
+.service_group:hover .circle-card {
   border-radius: 16px;
   height: 280px;
   width: 220px;
 }
 
-.group:hover .circle-card .more-info-button {
+.service_group:hover .circle-card .more-info-button {
   opacity: 1;
   visibility: visible;
 }
@@ -140,10 +140,58 @@
   z-index: -1;
 }
 
-.group:hover .button-with-border::before {
+.service_group:hover .button-with-border::before {
   width: 100%;
 }
 
-.group:hover .button-with-border {
+.service_group:hover .button-with-border {
   color: white;
 }
+/** Estilos generales para SLIDER DE SERVICIOS CIUDADANOS **/
+/**!▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀!**/
+/** Estilos generales para INFORMACIÓN MUNICIPIO Y MAPA **/
+.border-animation {
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.border-animation::before,
+.border-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border: 3.5px solid white;
+  transition: transform 0.5s ease;
+}
+
+.border-animation::before {
+  top: 0;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.border-animation::after {
+  bottom: 0;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.border-animation:hover::before {
+  transform: scaleY(1);
+}
+
+.border-animation:hover::after {
+  transform: scaleY(1);
+}
+
+/** Estilos generales para INFORMACIÓN MUNICIPIO Y MAPA **/
