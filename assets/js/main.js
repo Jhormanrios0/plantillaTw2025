@@ -14,15 +14,26 @@ splide.mount();
 
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#splide", {
+    classes: {
+      arrows: "splide__arrows",
+      arrow: "rounded-full border-[1px] border-white tr",
+      prev: "splide__arrow--prev left-0 absolute bottom-[80px]",
+      next: "splide__arrow--next right-0 absolute bottom-[80px]",
+    },
     type: "loop",
-    perPage: 3,
-    gap: "0.5rem",
-    pagination: true,
+    perPage: 4, // Desktop
+    gap: "10px",
+    pagination: false,
     arrows: true,
     autoplay: true,
-    interval: 1000,
+    interval: 70000,
     breakpoints: {
-      300: {
+      1024: {
+        // Tablet
+        perPage: 2,
+      },
+      640: {
+        // Mobile
         perPage: 1,
       },
     },
