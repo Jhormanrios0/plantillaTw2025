@@ -13,12 +13,12 @@ var splide = new Splide(".slider__home", {
 splide.mount();
 
 document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#splide", {
+  let splide_services = new Splide("#splide", {
     classes: {
       arrows: "splide__arrows",
       arrow: "rounded-full border-[1px] border-white tr",
-      prev: "splide__arrow--prev left-0 absolute bottom-[80px]",
-      next: "splide__arrow--next right-0 absolute bottom-[80px]",
+      prev: "splide__arrow--prev left-0 absolute bottom-[100px] ",
+      next: "splide__arrow--next right-0 absolute bottom-[100px]",
     },
     type: "loop",
     perPage: 4, // Desktop
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: false,
     arrows: true,
     autoplay: true,
-    interval: 70000,
+    interval: 5000,
     breakpoints: {
       1024: {
         // Tablet
@@ -37,7 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
         perPage: 1,
       },
     },
-  }).mount();
+  });
+
+  splide_services.on("mounted", function () {
+    const splideServices = document.querySelector("#splide");
+
+    const prevArrow = splideServices.querySelector(".splide__arrow--prev");
+    const nextArrow = splideServices.querySelector(".splide__arrow--next");
+
+    if (prevArrow && nextArrow) {
+      prevArrow.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="60" height="60" fill="#004693"><path d="M15.75,9.525,11.164,4.939A1.5,1.5,0,0,0,9.043,7.061l4.586,4.585a.5.5,0,0,1,0,.708L9.043,16.939a1.5,1.5,0,0,0,2.121,2.122l4.586-4.586A3.505,3.505,0,0,0,15.75,9.525Z"/></svg>';
+      nextArrow.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="60" height="60" fill="#004693"><path d="M15.75,9.525,11.164,4.939A1.5,1.5,0,0,0,9.043,7.061l4.586,4.585a.5.5,0,0,1,0,.708L9.043,16.939a1.5,1.5,0,0,0,2.121,2.122l4.586-4.586A3.505,3.505,0,0,0,15.75,9.525Z"/></svg>';
+    } else {
+      console.error("Arrows not found in the DOM.");
+    }
+  });
+
+  splide_services.mount();
 });
 
 var splide = new Splide(".slider__news", {
