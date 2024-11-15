@@ -56,6 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   splide_services.mount();
+
+  if(window.innerWidth < 1024) {
+    const previousSlide = document.querySelector(".service_group.active-mobile");
+      const activeSlide = document.querySelector(".service_group.is-active");
+      
+      if (activeSlide) {
+        activeSlide.classList.add("active-mobile");
+      }
+    splide_services.on('moved', function () {
+    
+      const previousSlide = document.querySelector(".service_group.active-mobile");
+      const activeSlide = document.querySelector(".service_group.is-active");
+      
+      if (activeSlide) {
+        activeSlide.classList.add("active-mobile");
+      }
+      
+      if (previousSlide) {
+        previousSlide.classList.remove("active-mobile");
+      }
+    });
+  }
+  
 });
 
 var splide = new Splide(".slider__news", {

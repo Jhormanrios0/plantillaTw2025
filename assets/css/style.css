@@ -147,6 +147,26 @@
 .service_group:hover .button-with-border {
   color: white;
 }
+
+.active-mobile .button-with-border::before {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.active-mobile .button-with-border {
+  color: white;
+}
+
+.active-mobile .circle-card {
+  border-radius: 16px;
+  height: 280px;
+  width: 220px;
+}
+
+.active-mobile .circle-card .more-info-button {
+  opacity: 1;
+  visibility: visible;
+}
 /** Estilos generales para SLIDER DE SERVICIOS CIUDADANOS **/
 /**!▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀!**/
 /** Estilos generales para INFORMACIÓN MUNICIPIO Y MAPA **/
