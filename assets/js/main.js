@@ -62,8 +62,8 @@ var splide = new Splide(".slider__news", {
   classes: {
     arrows: "splide__arrows translate-y-0 transform",
     arrow: "rounded-full ",
-    prev: "splide__arrow--prev   translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
-    next: "splide__arrow--next   translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
+    prev: "splide__arrow--prev  translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
+    next: "splide__arrow--next  translate-y-0 transform [&>svg]:fill-white right-0 [&>svg]:w-[25px] [&>svg]:h-[25px] ",
     pagination: " ",
     page: " ",
   },
@@ -71,3 +71,33 @@ var splide = new Splide(".slider__news", {
   autoplay: "play",
 });
 splide.mount();
+
+const scrollers = document.querySelectorAll(".scroller");
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute("data-animated", true);
+
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+
+    // Add hover event listeners to the scroller
+    scroller.addEventListener("mouseenter", () => {
+      scrollerInner.style.animationPlayState = "paused";
+    });
+    scroller.addEventListener("mouseleave", () => {
+      scrollerInner.style.animationPlayState = "running";
+    });
+  });
+}
+  
