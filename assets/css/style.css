@@ -216,29 +216,52 @@
 
 /** Estilos generales para INFORMACIÓN MUNICIPIO Y MAPA **/
 
+/** Estilos generales para PATROCINADORES **/
+/**!▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀!**/
 .tag-list li {
+  position: relative; /* Necesario para los pseudo-elementos */
   padding: 1rem;
-  background-color: gray; /* Color de fondo claro */
   border-radius: 0.5rem;
-  border: 1px solid black;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
-  color: white;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  color: var(--color-primary);
+  font-weight: bolder;
+  z-index: 1; /* Asegura que el texto quede encima */
+}
+
+.tag-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tertiary);
+  opacity: 0.5;
+  border-radius: inherit;
+  z-index: -1;
+  transition: background-color 0.3s ease, opacity 0.3s ease-in-out;
 }
 
 .tag-list li:hover {
   text-decoration: none;
-  color: black;
-  background-color: #f0f0; /* Color de fondo al hacer hover */
-  transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+  color: var(--color-primary); /* Cambia el color del texto */
+  transform: scale(1.1); /* Efecto de escala */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold; /* Texto en negrita */
 }
 
+.tag-list li:hover::before {
+  background-color: white; /* Fondo blanco en hover */
+  opacity: 1; /* Fondo completamente visible */
+}
 
-.scroller{
+.scroller {
   width: 100%;
   overflow: hidden;
-
 }
 
 .scroller__inner {
@@ -252,11 +275,18 @@
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 80s) var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 80s)
+    var(--_animation-direction, forwards) linear infinite;
 }
-.scroller[data-animated="true"]{
+.scroller[data-animated="true"] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 90%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 90%,
+    transparent
+  );
   mask: linear-gradient(90deg, transparent, white 20%, white 90%, transparent);
 }
 .scroller[data-direction="right"] {
@@ -280,3 +310,4 @@
     transform: translate(calc(-50% - 0.5rem));
   }
 }
+/** Estilos generales para PATROCINADORES **/
