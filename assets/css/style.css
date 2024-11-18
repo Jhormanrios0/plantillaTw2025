@@ -216,16 +216,25 @@
 
 /** Estilos generales para INFORMACIÓN MUNICIPIO Y MAPA **/
 
-.tag-list{
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
-}
-.tas-list li {
+.tag-list li {
   padding: 1rem;
-  background-color: #2b87de;
-  border-radius: 0.5rem
+  background-color: gray; /* Color de fondo claro */
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+  color: white;
 }
+
+.tag-list li:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #f0f0; /* Color de fondo al hacer hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+
 .scroller{
   width: 100%;
   overflow: hidden;
@@ -247,8 +256,8 @@
 }
 .scroller[data-animated="true"]{
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 90%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 90%, transparent);
 }
 .scroller[data-direction="right"] {
   --_animation-direction: reverse;
