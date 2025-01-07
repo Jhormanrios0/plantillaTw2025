@@ -95,32 +95,52 @@ var splide = new Splide(".slider__news", {
 });
 splide.mount();
 
-const scrollers = document.querySelectorAll(".scroller");
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollers = document.querySelectorAll(".scroller__inner");
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
   scrollers.forEach((scroller) => {
-    scroller.setAttribute("data-animated", true);
+    const items = scroller.querySelectorAll("li");
+    let currentIndex = 0;
+    let intervalId;
 
-    const scrollerInner = scroller.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
+    // Muestra el primer elemento
+    items[currentIndex].style.display = "list-item";
+    items[currentIndex].style.opacity = 1;
 
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
+    const startRotation = () => {
+      intervalId = setInterval(() => {
+        // Oculta el elemento actual con una transición
+        items[currentIndex].style.transition = "opacity 1s ease-in-out";
+        items[currentIndex].style.opacity = 0;
 
-    // Add hover event listeners to the scroller
-    scroller.addEventListener("mouseenter", () => {
-      scrollerInner.style.animationPlayState = "paused";
-    });
-    scroller.addEventListener("mouseleave", () => {
-      scrollerInner.style.animationPlayState = "running";
+        // Espera a que la transición termine antes de ocultar el elemento
+        setTimeout(() => {
+          items[currentIndex].style.display = "none";
+
+          // Calcula el siguiente índice
+          currentIndex = (currentIndex + 1) % items.length;
+
+          // Muestra el siguiente elemento con una transición
+          items[currentIndex].style.display = "list-item";
+          items[currentIndex].style.transition = "opacity 1s ease-in-out";
+          setTimeout(() => {
+            items[currentIndex].style.opacity = 1;
+          }, 50); // Pequeño retraso para asegurar que la transición se aplique
+        }, 1000); // Duración de la transición de ocultar
+      }, 4000); // Cambia cada 2 segundos
+    };
+
+    const stopRotation = () => {
+      clearInterval(intervalId);
+    };
+
+    // Inicia la rotación
+    startRotation();
+
+    // Detiene la rotación al hacer hover
+    items.forEach((item) => {
+      item.addEventListener("mouseover", stopRotation);
+      item.addEventListener("mouseout", startRotation);
     });
   });
-}
-  
+});

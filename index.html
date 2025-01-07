@@ -916,33 +916,32 @@
     </section>
 
     <!--*  Patrocinadores-->
-    <section class="container mx-auto my-[50px]">
+    <section class="container flex mx-auto my-[50px]">
       <!-- *°Contenedor Primera Fila Patrocinadores°* -->
-      <article class="scroller" data-direction="left">
-        <ul class="tag-list scroller__inner">
-          <li class=""><a href="">Federación Colombiana de Municipios (FCM)</a></li>
-          <li><a href="">Gobierno en Línea - MinTIC</a></li>
-          <li><a href="">Ministerio de Tecnologías de la Información (MinTIC)</a></li>
-          <li><a href="">Colombia Compra Eficiente</a></li>
-          <li><a href="">Función Pública</a></li>
-          <li><a href="">Hora Legal - Instituto Nacional de Metrología</a></li>
-          <li><a href="">Portal Territorial - DNP</a></li>
-          <li><a href="">Urna de Cristal</a></li>
-          <li><a href="">Gov.co</a></li>
-          <li><a href="">Registraduría Nacional del Estado Civil</a></li>
-          <li><a href="">Registraduría Nacional del Estado Civil</a></li>
-          <li><a href="">Sisbén</a></li>
+      <article class="scroller down" >
+        <ul class="tag-list scroller__inner ">
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-colombiacompra.png" alt=""></a></li>
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-minTic.png" alt=""></a></li>
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-colombiacompra.png" alt=""></a></li>
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-minTic.png" alt=""></a></li>
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-colombiacompra.png" alt=""></a></li>
+          <li class=""><a href=""><img src="assets/img/Patrocinadoresv2/logo-minTic.png" alt=""></a></li>
         </ul>
       </article>
       <!-- *°Contenedor Primera Fila Patrocinadores°* -->
       <!-- *°Contenedor Segunda Fila Patrocinadores°* -->
-      <article class="scroller" data-direction="right">
-        <ul class="tag-list scroller__inner">
+      <article class="scroller up" >
+        <ul class="tag-list scroller__inner" >
           <li><a href="">Policía Nacional de Colombia</a></li>
           <li><a href="">Cancillería de Colombia</a></li>
           <li><a href="">LexBase</a></li>
           <li><a href="">LexBase</a></li>
           <li><a href="">Ejército Nacional de Colombia</a></li>
+         
+        </ul>
+      </article>
+      <article class="scroller up">
+        <ul class="tag-list scroller__inner">
           <li><a href="">Departamento Nacional de Planeación (DNP)</a></li>
           <li><a href="">Ministerio de Salud y Protección Social</a></li>
           <li><a href="">SIMIT - Federación Colombiana de Municipios</a></li>
@@ -951,6 +950,7 @@
           <li><a href="">Departamento de Prosperidad Social</a></li>
           <li><a href="">Bancolombia</a></li>
           <li><a href="">Armada Nacional de Colombia</a></li>
+      
         </ul>
       </article>
       <!-- *°Contenedor Segunda Fila Patrocinadores°* -->
@@ -1181,3 +1181,33 @@
 </body>
 
 </html>
+
+<li class='splide__slide'>
+  <div class='max-w-md min-h-[600px] p-2 bg-white border border-gray-200 rounded-xl shadow relative'>
+    <figure class='w-ful'>
+      <img class='rounded-t-lg w-full' src='" + urlImagen + "'  alt='Imagen' />
+    </figure>
+    <span class='date absolute top-0 h-auto w-62 mt-2 text-center bg-white text-black font-bold p-4'>" + DtFechaEvent + "</span>
+    <div class='p-5'>
+      <div class='flex justify-between items-center gap-2'>
+        <div>
+          <i class='fa-regular fa-clock'></i>
+          <span class='text-red-500 text-sm font-semibold'> 7:30 P.M.</span>
+        </div>
+        <div class='bg-black rounded-full px-2'>
+          <i class='fa-solid fa-share invert text-[10px]'></i>
+        </div>
+      </div>
+      <div class='py-3 flex flex-col'>
+        <p class='mb-3 text-black line-clamp-3 basis-[85px] font-bold py-2'>" + titulo + "</p>
+        <span class='line-clamp-3 text-sm py-5'>
+          " + txtFinal + "
+        </span>
+      </div>
+      <a href='" + strurl + "'
+        class='more h-10 w-full  bg-black hover:bg-gray-700 transition-colors ease-in-out duration-500 flex items-center justify-center  font-semibold shadow'>
+        <h6 class='text-white w-full block text-center px-2  m-auto'>Seguir leyendo</h6>
+      </a>
+    </div>
+  </div>
+</li>
